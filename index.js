@@ -60,7 +60,7 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name ) {
+function getName(name){
 }
 
 /**
@@ -138,9 +138,9 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(inventory, index) {
-  /* code here */
-}
+function getCarInfoByIndex(inventory, index) { 
+   return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;}
+
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -169,8 +169,12 @@ function getLastCarInfo(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  for(let i = 0; i < inventory.length; i++) {
+    if(inventory[i].id === id) {
+      return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`
+    };
+  }
 }
 
 /**
